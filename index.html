@@ -14581,7 +14581,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Title"><strong>Title</strong><a class="anchor-link" href="#Title">&#182;</a></h1><p>Sydney Feldman and Gracie Dunaway</p>
-<p>gitpage link</p>
+<p><a href="https://sfeldman1.github.io">Project Website</a></p>
 
 </div>
 </div>
@@ -14638,7 +14638,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Connecting Notebook to Google Drive</span>
@@ -14681,7 +14681,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Importing libraries</span>
@@ -14700,7 +14700,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Reading in the data set</span>
@@ -14719,8 +14719,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Below are the columns in our data frame. The data frame currently has 99 columns of different data. Currently, we have not yet decided all
-of the questions that we will be asking, so we are not going to remove any columns yet. However, for this milestone, we will create a table from this original data frame and apply the principles of tidy data.</p>
+<p>Below is the main dataset with all 99 columns it came with. At this time, we do not know which of the columns we will not be working with, so we have decided not to drop or alter any of them yet. However, for this milestone, we will create a table from this original dataset and apply the principles of tidy data.</p>
+<p>Once we decide what questions we will be exploring, we will finish cleaning this main dataset, however we can check for empty data and correct data types first.</p>
 
 </div>
 </div>
@@ -14730,11 +14730,11 @@ of the questions that we will be asking, so we are not going to remove any colum
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'display.max_columns'</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14752,143 +14752,13 @@ of the questions that we will be asking, so we are not going to remove any colum
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>Index([&#39;Year&#39;, &#39;State.Code&#39;, &#39;State.Name&#39;, &#39;Total.Math&#39;, &#39;Total.Test-takers&#39;,
-       &#39;Total.Verbal&#39;, &#39;Academic Subjects.Arts/Music.Average GPA&#39;,
-       &#39;Academic Subjects.Arts/Music.Average Years&#39;,
-       &#39;Academic Subjects.English.Average GPA&#39;,
-       &#39;Academic Subjects.English.Average Years&#39;,
-       &#39;Academic Subjects.Foreign Languages.Average GPA&#39;,
-       &#39;Academic Subjects.Foreign Languages.Average Years&#39;,
-       &#39;Academic Subjects.Mathematics.Average GPA&#39;,
-       &#39;Academic Subjects.Mathematics.Average Years&#39;,
-       &#39;Academic Subjects.Natural Sciences.Average GPA&#39;,
-       &#39;Academic Subjects.Natural Sciences.Average Years&#39;,
-       &#39;Academic Subjects.Social Sciences/History.Average GPA&#39;,
-       &#39;Academic Subjects.Social Sciences/History.Average Years&#39;,
-       &#39;Family Income.Between 20-40k.Math&#39;,
-       &#39;Family Income.Between 20-40k.Test-takers&#39;,
-       &#39;Family Income.Between 20-40k.Verbal&#39;,
-       &#39;Family Income.Between 40-60k.Math&#39;,
-       &#39;Family Income.Between 40-60k.Test-takers&#39;,
-       &#39;Family Income.Between 40-60k.Verbal&#39;,
-       &#39;Family Income.Between 60-80k.Math&#39;,
-       &#39;Family Income.Between 60-80k.Test-takers&#39;,
-       &#39;Family Income.Between 60-80k.Verbal&#39;,
-       &#39;Family Income.Between 80-100k.Math&#39;,
-       &#39;Family Income.Between 80-100k.Test-takers&#39;,
-       &#39;Family Income.Between 80-100k.Verbal&#39;,
-       &#39;Family Income.Less than 20k.Math&#39;,
-       &#39;Family Income.Less than 20k.Test-takers&#39;,
-       &#39;Family Income.Less than 20k.Verbal&#39;,
-       &#39;Family Income.More than 100k.Math&#39;,
-       &#39;Family Income.More than 100k.Test-takers&#39;,
-       &#39;Family Income.More than 100k.Verbal&#39;, &#39;GPA.A minus.Math&#39;,
-       &#39;GPA.A minus.Test-takers&#39;, &#39;GPA.A minus.Verbal&#39;, &#39;GPA.A plus.Math&#39;,
-       &#39;GPA.A plus.Test-takers&#39;, &#39;GPA.A plus.Verbal&#39;, &#39;GPA.A.Math&#39;,
-       &#39;GPA.A.Test-takers&#39;, &#39;GPA.A.Verbal&#39;, &#39;GPA.B.Math&#39;, &#39;GPA.B.Test-takers&#39;,
-       &#39;GPA.B.Verbal&#39;, &#39;GPA.C.Math&#39;, &#39;GPA.C.Test-takers&#39;, &#39;GPA.C.Verbal&#39;,
-       &#39;GPA.D or lower.Math&#39;, &#39;GPA.D or lower.Test-takers&#39;,
-       &#39;GPA.D or lower.Verbal&#39;, &#39;GPA.No response.Math&#39;,
-       &#39;GPA.No response.Test-takers&#39;, &#39;GPA.No response.Verbal&#39;,
-       &#39;Gender.Female.Math&#39;, &#39;Gender.Female.Test-takers&#39;,
-       &#39;Gender.Female.Verbal&#39;, &#39;Gender.Male.Math&#39;, &#39;Gender.Male.Test-takers&#39;,
-       &#39;Gender.Male.Verbal&#39;, &#39;Score Ranges.Between 200 to 300.Math.Females&#39;,
-       &#39;Score Ranges.Between 200 to 300.Math.Males&#39;,
-       &#39;Score Ranges.Between 200 to 300.Math.Total&#39;,
-       &#39;Score Ranges.Between 200 to 300.Verbal.Females&#39;,
-       &#39;Score Ranges.Between 200 to 300.Verbal.Males&#39;,
-       &#39;Score Ranges.Between 200 to 300.Verbal.Total&#39;,
-       &#39;Score Ranges.Between 300 to 400.Math.Females&#39;,
-       &#39;Score Ranges.Between 300 to 400.Math.Males&#39;,
-       &#39;Score Ranges.Between 300 to 400.Math.Total&#39;,
-       &#39;Score Ranges.Between 300 to 400.Verbal.Females&#39;,
-       &#39;Score Ranges.Between 300 to 400.Verbal.Males&#39;,
-       &#39;Score Ranges.Between 300 to 400.Verbal.Total&#39;,
-       &#39;Score Ranges.Between 400 to 500.Math.Females&#39;,
-       &#39;Score Ranges.Between 400 to 500.Math.Males&#39;,
-       &#39;Score Ranges.Between 400 to 500.Math.Total&#39;,
-       &#39;Score Ranges.Between 400 to 500.Verbal.Females&#39;,
-       &#39;Score Ranges.Between 400 to 500.Verbal.Males&#39;,
-       &#39;Score Ranges.Between 400 to 500.Verbal.Total&#39;,
-       &#39;Score Ranges.Between 500 to 600.Math.Females&#39;,
-       &#39;Score Ranges.Between 500 to 600.Math.Males&#39;,
-       &#39;Score Ranges.Between 500 to 600.Math.Total&#39;,
-       &#39;Score Ranges.Between 500 to 600.Verbal.Females&#39;,
-       &#39;Score Ranges.Between 500 to 600.Verbal.Males&#39;,
-       &#39;Score Ranges.Between 500 to 600.Verbal.Total&#39;,
-       &#39;Score Ranges.Between 600 to 700.Math.Females&#39;,
-       &#39;Score Ranges.Between 600 to 700.Math.Males&#39;,
-       &#39;Score Ranges.Between 600 to 700.Math.Total&#39;,
-       &#39;Score Ranges.Between 600 to 700.Verbal.Females&#39;,
-       &#39;Score Ranges.Between 600 to 700.Verbal.Males&#39;,
-       &#39;Score Ranges.Between 600 to 700.Verbal.Total&#39;,
-       &#39;Score Ranges.Between 700 to 800.Math.Females&#39;,
-       &#39;Score Ranges.Between 700 to 800.Math.Males&#39;,
-       &#39;Score Ranges.Between 700 to 800.Math.Total&#39;,
-       &#39;Score Ranges.Between 700 to 800.Verbal.Females&#39;,
-       &#39;Score Ranges.Between 700 to 800.Verbal.Males&#39;,
-       &#39;Score Ranges.Between 700 to 800.Verbal.Total&#39;],
-      dtype=&#39;object&#39;)</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The first table we are going to create and analyze will be used to compare correlations between household income and SAT scores. To do this, we will create another table, using columns from the main dataframe. After that, we will rename these columns for clarity.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="n">new_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">'Year'</span><span class="p">,</span> <span class="s1">'State.Name'</span><span class="p">,</span> <span class="s1">'Family Income.Less than 20k.Math'</span><span class="p">,</span><span class="s1">'Family Income.Less than 20k.Verbal'</span><span class="p">,</span><span class="s1">'Family Income.Between 20-40k.Test-takers'</span><span class="p">,</span> <span class="s1">'Family Income.Between 20-40k.Math'</span><span class="p">,</span> <span class="s1">'Family Income.Between 20-40k.Verbal'</span><span class="p">,</span> <span class="s1">'Family Income.Between 40-60k.Test-takers'</span><span class="p">,</span><span class="s1">'Family Income.Between 40-60k.Math'</span><span class="p">,</span> <span class="s1">'Family Income.Between 40-60k.Verbal'</span><span class="p">,</span><span class="s1">'Family Income.Between 60-80k.Test-takers'</span><span class="p">,</span> <span class="s1">'Family Income.Between 60-80k.Math'</span><span class="p">,</span><span class="s1">'Family Income.Between 60-80k.Verbal'</span><span class="p">,</span> <span class="s1">'Family Income.Between 80-100k.Test-takers'</span><span class="p">,</span> <span class="s1">'Family Income.Between 80-100k.Math'</span><span class="p">,</span> <span class="s1">'Family Income.Between 80-100k.Verbal'</span><span class="p">,</span> <span class="s1">'Family Income.More than 100k.Test-takers'</span><span class="p">,</span> <span class="s1">'Family Income.More than 100k.Math'</span><span class="p">,</span> <span class="s1">'Family Income.More than 100k.Verbal'</span> <span class="p">]]</span>
-<span class="n">new_df</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-  <div id="df-6752c1d0-0780-43c5-a01f-44335be23f38" class="colab-df-container">
+  <div id="df-8a4127e2-1418-4528-aae9-a3e4bccd30c3" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -14908,277 +14778,937 @@ of the questions that we will be asking, so we are not going to remove any colum
     <tr style="text-align: right;">
       <th></th>
       <th>Year</th>
+      <th>State.Code</th>
       <th>State.Name</th>
-      <th>Family Income.Less than 20k.Math</th>
-      <th>Family Income.Less than 20k.Verbal</th>
-      <th>Family Income.Between 20-40k.Test-takers</th>
+      <th>Total.Math</th>
+      <th>Total.Test-takers</th>
+      <th>Total.Verbal</th>
+      <th>Academic Subjects.Arts/Music.Average GPA</th>
+      <th>Academic Subjects.Arts/Music.Average Years</th>
+      <th>Academic Subjects.English.Average GPA</th>
+      <th>Academic Subjects.English.Average Years</th>
+      <th>Academic Subjects.Foreign Languages.Average GPA</th>
+      <th>Academic Subjects.Foreign Languages.Average Years</th>
+      <th>Academic Subjects.Mathematics.Average GPA</th>
+      <th>Academic Subjects.Mathematics.Average Years</th>
+      <th>Academic Subjects.Natural Sciences.Average GPA</th>
+      <th>Academic Subjects.Natural Sciences.Average Years</th>
+      <th>Academic Subjects.Social Sciences/History.Average GPA</th>
+      <th>Academic Subjects.Social Sciences/History.Average Years</th>
       <th>Family Income.Between 20-40k.Math</th>
+      <th>Family Income.Between 20-40k.Test-takers</th>
       <th>Family Income.Between 20-40k.Verbal</th>
-      <th>Family Income.Between 40-60k.Test-takers</th>
       <th>Family Income.Between 40-60k.Math</th>
+      <th>Family Income.Between 40-60k.Test-takers</th>
       <th>Family Income.Between 40-60k.Verbal</th>
-      <th>Family Income.Between 60-80k.Test-takers</th>
       <th>Family Income.Between 60-80k.Math</th>
+      <th>Family Income.Between 60-80k.Test-takers</th>
       <th>Family Income.Between 60-80k.Verbal</th>
-      <th>Family Income.Between 80-100k.Test-takers</th>
       <th>Family Income.Between 80-100k.Math</th>
+      <th>Family Income.Between 80-100k.Test-takers</th>
       <th>Family Income.Between 80-100k.Verbal</th>
-      <th>Family Income.More than 100k.Test-takers</th>
+      <th>Family Income.Less than 20k.Math</th>
+      <th>Family Income.Less than 20k.Test-takers</th>
+      <th>Family Income.Less than 20k.Verbal</th>
       <th>Family Income.More than 100k.Math</th>
+      <th>Family Income.More than 100k.Test-takers</th>
       <th>Family Income.More than 100k.Verbal</th>
+      <th>GPA.A minus.Math</th>
+      <th>GPA.A minus.Test-takers</th>
+      <th>GPA.A minus.Verbal</th>
+      <th>GPA.A plus.Math</th>
+      <th>...</th>
+      <th>Gender.Female.Verbal</th>
+      <th>Gender.Male.Math</th>
+      <th>Gender.Male.Test-takers</th>
+      <th>Gender.Male.Verbal</th>
+      <th>Score Ranges.Between 200 to 300.Math.Females</th>
+      <th>Score Ranges.Between 200 to 300.Math.Males</th>
+      <th>Score Ranges.Between 200 to 300.Math.Total</th>
+      <th>Score Ranges.Between 200 to 300.Verbal.Females</th>
+      <th>Score Ranges.Between 200 to 300.Verbal.Males</th>
+      <th>Score Ranges.Between 200 to 300.Verbal.Total</th>
+      <th>Score Ranges.Between 300 to 400.Math.Females</th>
+      <th>Score Ranges.Between 300 to 400.Math.Males</th>
+      <th>Score Ranges.Between 300 to 400.Math.Total</th>
+      <th>Score Ranges.Between 300 to 400.Verbal.Females</th>
+      <th>Score Ranges.Between 300 to 400.Verbal.Males</th>
+      <th>Score Ranges.Between 300 to 400.Verbal.Total</th>
+      <th>Score Ranges.Between 400 to 500.Math.Females</th>
+      <th>Score Ranges.Between 400 to 500.Math.Males</th>
+      <th>Score Ranges.Between 400 to 500.Math.Total</th>
+      <th>Score Ranges.Between 400 to 500.Verbal.Females</th>
+      <th>Score Ranges.Between 400 to 500.Verbal.Males</th>
+      <th>Score Ranges.Between 400 to 500.Verbal.Total</th>
+      <th>Score Ranges.Between 500 to 600.Math.Females</th>
+      <th>Score Ranges.Between 500 to 600.Math.Males</th>
+      <th>Score Ranges.Between 500 to 600.Math.Total</th>
+      <th>Score Ranges.Between 500 to 600.Verbal.Females</th>
+      <th>Score Ranges.Between 500 to 600.Verbal.Males</th>
+      <th>Score Ranges.Between 500 to 600.Verbal.Total</th>
+      <th>Score Ranges.Between 600 to 700.Math.Females</th>
+      <th>Score Ranges.Between 600 to 700.Math.Males</th>
+      <th>Score Ranges.Between 600 to 700.Math.Total</th>
+      <th>Score Ranges.Between 600 to 700.Verbal.Females</th>
+      <th>Score Ranges.Between 600 to 700.Verbal.Males</th>
+      <th>Score Ranges.Between 600 to 700.Verbal.Total</th>
+      <th>Score Ranges.Between 700 to 800.Math.Females</th>
+      <th>Score Ranges.Between 700 to 800.Math.Males</th>
+      <th>Score Ranges.Between 700 to 800.Math.Total</th>
+      <th>Score Ranges.Between 700 to 800.Verbal.Females</th>
+      <th>Score Ranges.Between 700 to 800.Verbal.Males</th>
+      <th>Score Ranges.Between 700 to 800.Verbal.Total</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
       <td>2005</td>
+      <td>AL</td>
       <td>Alabama</td>
-      <td>462</td>
-      <td>474</td>
-      <td>324</td>
+      <td>559</td>
+      <td>3985</td>
+      <td>567</td>
+      <td>3.92</td>
+      <td>2.2</td>
+      <td>3.53</td>
+      <td>3.9</td>
+      <td>3.54</td>
+      <td>2.6</td>
+      <td>3.41</td>
+      <td>4.0</td>
+      <td>3.52</td>
+      <td>3.9</td>
+      <td>3.59</td>
+      <td>3.9</td>
       <td>513</td>
+      <td>324</td>
       <td>527</td>
-      <td>442</td>
       <td>539</td>
+      <td>442</td>
       <td>551</td>
-      <td>473</td>
       <td>550</td>
+      <td>473</td>
       <td>564</td>
-      <td>475</td>
       <td>566</td>
+      <td>475</td>
       <td>577</td>
-      <td>980</td>
+      <td>462</td>
+      <td>175</td>
+      <td>474</td>
       <td>588</td>
+      <td>980</td>
       <td>590</td>
+      <td>569</td>
+      <td>724</td>
+      <td>575</td>
+      <td>622</td>
+      <td>...</td>
+      <td>561</td>
+      <td>582</td>
+      <td>1913</td>
+      <td>574</td>
+      <td>22</td>
+      <td>10</td>
+      <td>32</td>
+      <td>14</td>
+      <td>17</td>
+      <td>31</td>
+      <td>173</td>
+      <td>93</td>
+      <td>266</td>
+      <td>123</td>
+      <td>84</td>
+      <td>207</td>
+      <td>514</td>
+      <td>293</td>
+      <td>807</td>
+      <td>430</td>
+      <td>332</td>
+      <td>762</td>
+      <td>722</td>
+      <td>614</td>
+      <td>1336</td>
+      <td>690</td>
+      <td>617</td>
+      <td>1307</td>
+      <td>485</td>
+      <td>611</td>
+      <td>1096</td>
+      <td>596</td>
+      <td>613</td>
+      <td>1209</td>
+      <td>156</td>
+      <td>292</td>
+      <td>448</td>
+      <td>219</td>
+      <td>250</td>
+      <td>469</td>
     </tr>
     <tr>
       <th>1</th>
       <td>2005</td>
+      <td>AK</td>
       <td>Alaska</td>
-      <td>464</td>
-      <td>467</td>
-      <td>401</td>
-      <td>492</td>
-      <td>500</td>
-      <td>539</td>
-      <td>517</td>
-      <td>522</td>
-      <td>603</td>
-      <td>513</td>
       <td>519</td>
-      <td>444</td>
+      <td>3996</td>
+      <td>523</td>
+      <td>3.76</td>
+      <td>1.9</td>
+      <td>3.35</td>
+      <td>3.9</td>
+      <td>3.34</td>
+      <td>2.1</td>
+      <td>3.06</td>
+      <td>3.5</td>
+      <td>3.25</td>
+      <td>3.2</td>
+      <td>3.39</td>
+      <td>3.4</td>
+      <td>492</td>
+      <td>401</td>
+      <td>500</td>
+      <td>517</td>
+      <td>539</td>
+      <td>522</td>
+      <td>513</td>
+      <td>603</td>
+      <td>519</td>
       <td>528</td>
+      <td>444</td>
       <td>534</td>
-      <td>540</td>
+      <td>464</td>
+      <td>191</td>
+      <td>467</td>
       <td>541</td>
+      <td>540</td>
       <td>544</td>
+      <td>544</td>
+      <td>673</td>
+      <td>546</td>
+      <td>600</td>
+      <td>...</td>
+      <td>521</td>
+      <td>535</td>
+      <td>1835</td>
+      <td>526</td>
+      <td>30</td>
+      <td>20</td>
+      <td>50</td>
+      <td>26</td>
+      <td>26</td>
+      <td>52</td>
+      <td>233</td>
+      <td>153</td>
+      <td>386</td>
+      <td>218</td>
+      <td>171</td>
+      <td>389</td>
+      <td>696</td>
+      <td>485</td>
+      <td>1181</td>
+      <td>656</td>
+      <td>552</td>
+      <td>1208</td>
+      <td>813</td>
+      <td>616</td>
+      <td>1429</td>
+      <td>729</td>
+      <td>596</td>
+      <td>1325</td>
+      <td>342</td>
+      <td>445</td>
+      <td>787</td>
+      <td>423</td>
+      <td>375</td>
+      <td>798</td>
+      <td>47</td>
+      <td>116</td>
+      <td>163</td>
+      <td>109</td>
+      <td>115</td>
+      <td>224</td>
     </tr>
     <tr>
       <th>2</th>
       <td>2005</td>
+      <td>AZ</td>
       <td>Arizona</td>
-      <td>485</td>
-      <td>474</td>
-      <td>2121</td>
+      <td>530</td>
+      <td>18184</td>
+      <td>526</td>
+      <td>3.85</td>
+      <td>2.1</td>
+      <td>3.45</td>
+      <td>3.9</td>
+      <td>3.41</td>
+      <td>2.6</td>
+      <td>3.25</td>
+      <td>3.9</td>
+      <td>3.43</td>
+      <td>3.4</td>
+      <td>3.55</td>
+      <td>3.3</td>
       <td>498</td>
+      <td>2121</td>
       <td>495</td>
-      <td>2270</td>
       <td>520</td>
+      <td>2270</td>
       <td>518</td>
-      <td>2372</td>
       <td>524</td>
+      <td>2372</td>
       <td>523</td>
-      <td>1866</td>
       <td>534</td>
+      <td>1866</td>
       <td>533</td>
-      <td>3083</td>
+      <td>485</td>
+      <td>891</td>
+      <td>474</td>
       <td>554</td>
+      <td>3083</td>
       <td>546</td>
+      <td>541</td>
+      <td>3334</td>
+      <td>535</td>
+      <td>605</td>
+      <td>...</td>
+      <td>522</td>
+      <td>549</td>
+      <td>8378</td>
+      <td>531</td>
+      <td>119</td>
+      <td>72</td>
+      <td>191</td>
+      <td>115</td>
+      <td>86</td>
+      <td>201</td>
+      <td>881</td>
+      <td>450</td>
+      <td>1331</td>
+      <td>739</td>
+      <td>613</td>
+      <td>1352</td>
+      <td>3215</td>
+      <td>1948</td>
+      <td>5163</td>
+      <td>3048</td>
+      <td>2398</td>
+      <td>5446</td>
+      <td>3576</td>
+      <td>3152</td>
+      <td>6728</td>
+      <td>3661</td>
+      <td>3101</td>
+      <td>6762</td>
+      <td>1688</td>
+      <td>2126</td>
+      <td>3814</td>
+      <td>1831</td>
+      <td>1679</td>
+      <td>3510</td>
+      <td>327</td>
+      <td>630</td>
+      <td>957</td>
+      <td>412</td>
+      <td>501</td>
+      <td>913</td>
     </tr>
     <tr>
       <th>3</th>
       <td>2005</td>
+      <td>AR</td>
       <td>Arkansas</td>
-      <td>489</td>
-      <td>486</td>
-      <td>180</td>
+      <td>552</td>
+      <td>1600</td>
+      <td>563</td>
+      <td>3.90</td>
+      <td>2.2</td>
+      <td>3.61</td>
+      <td>4.0</td>
+      <td>3.64</td>
+      <td>2.6</td>
+      <td>3.46</td>
+      <td>4.1</td>
+      <td>3.55</td>
+      <td>3.7</td>
+      <td>3.67</td>
+      <td>3.6</td>
       <td>513</td>
+      <td>180</td>
       <td>526</td>
-      <td>245</td>
       <td>543</td>
+      <td>245</td>
       <td>555</td>
-      <td>227</td>
       <td>553</td>
+      <td>227</td>
+      <td>570</td>
       <td>570</td>
       <td>147</td>
-      <td>570</td>
       <td>580</td>
-      <td>314</td>
+      <td>489</td>
+      <td>107</td>
+      <td>486</td>
       <td>572</td>
+      <td>314</td>
       <td>589</td>
+      <td>559</td>
+      <td>298</td>
+      <td>572</td>
+      <td>629</td>
+      <td>...</td>
+      <td>558</td>
+      <td>570</td>
+      <td>741</td>
+      <td>570</td>
+      <td>12</td>
+      <td>7</td>
+      <td>19</td>
+      <td>9</td>
+      <td>3</td>
+      <td>12</td>
+      <td>68</td>
+      <td>31</td>
+      <td>99</td>
+      <td>46</td>
+      <td>42</td>
+      <td>88</td>
+      <td>210</td>
+      <td>137</td>
+      <td>347</td>
+      <td>183</td>
+      <td>141</td>
+      <td>324</td>
+      <td>316</td>
+      <td>244</td>
+      <td>560</td>
+      <td>302</td>
+      <td>236</td>
+      <td>538</td>
+      <td>204</td>
+      <td>239</td>
+      <td>443</td>
+      <td>242</td>
+      <td>226</td>
+      <td>468</td>
+      <td>49</td>
+      <td>83</td>
+      <td>132</td>
+      <td>77</td>
+      <td>93</td>
+      <td>170</td>
     </tr>
     <tr>
       <th>4</th>
       <td>2005</td>
+      <td>CA</td>
       <td>California</td>
-      <td>451</td>
-      <td>421</td>
-      <td>26161</td>
-      <td>477</td>
-      <td>458</td>
-      <td>18347</td>
-      <td>506</td>
-      <td>494</td>
-      <td>17937</td>
-      <td>521</td>
-      <td>511</td>
-      <td>14120</td>
-      <td>535</td>
-      <td>525</td>
-      <td>27984</td>
-      <td>566</td>
-      <td>551</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>572</th>
-      <td>2015</td>
-      <td>Virginia</td>
-      <td>441</td>
-      <td>446</td>
-      <td>4906</td>
-      <td>469</td>
-      <td>472</td>
-      <td>5070</td>
-      <td>488</td>
-      <td>494</td>
-      <td>4843</td>
-      <td>496</td>
-      <td>505</td>
-      <td>4797</td>
-      <td>514</td>
-      <td>518</td>
-      <td>16858</td>
-      <td>549</td>
-      <td>550</td>
-    </tr>
-    <tr>
-      <th>573</th>
-      <td>2015</td>
-      <td>Washington</td>
-      <td>449</td>
-      <td>437</td>
-      <td>3689</td>
-      <td>483</td>
-      <td>473</td>
-      <td>3454</td>
-      <td>503</td>
-      <td>499</td>
-      <td>3619</td>
-      <td>521</td>
-      <td>517</td>
-      <td>3496</td>
-      <td>534</td>
-      <td>530</td>
-      <td>10262</td>
-      <td>560</td>
-      <td>552</td>
-    </tr>
-    <tr>
-      <th>574</th>
-      <td>2015</td>
-      <td>West Virginia</td>
-      <td>448</td>
-      <td>455</td>
-      <td>269</td>
-      <td>468</td>
-      <td>481</td>
-      <td>294</td>
-      <td>483</td>
-      <td>492</td>
-      <td>281</td>
-      <td>487</td>
-      <td>501</td>
-      <td>297</td>
-      <td>503</td>
-      <td>511</td>
-      <td>696</td>
       <td>522</td>
-      <td>532</td>
-    </tr>
-    <tr>
-      <th>575</th>
-      <td>2015</td>
-      <td>Wisconsin</td>
-      <td>573</td>
-      <td>532</td>
-      <td>127</td>
+      <td>186552</td>
+      <td>504</td>
+      <td>3.76</td>
+      <td>1.8</td>
+      <td>3.32</td>
+      <td>3.8</td>
+      <td>3.29</td>
+      <td>2.8</td>
+      <td>3.05</td>
+      <td>3.7</td>
+      <td>3.20</td>
+      <td>3.2</td>
+      <td>3.38</td>
+      <td>3.3</td>
+      <td>477</td>
+      <td>26161</td>
+      <td>458</td>
+      <td>506</td>
+      <td>18347</td>
+      <td>494</td>
+      <td>521</td>
+      <td>17937</td>
+      <td>511</td>
+      <td>535</td>
+      <td>14120</td>
+      <td>525</td>
+      <td>451</td>
+      <td>19323</td>
+      <td>421</td>
+      <td>566</td>
+      <td>27984</td>
       <td>551</td>
-      <td>544</td>
-      <td>174</td>
-      <td>596</td>
-      <td>579</td>
-      <td>172</td>
-      <td>590</td>
-      <td>580</td>
-      <td>213</td>
-      <td>605</td>
-      <td>595</td>
-      <td>730</td>
-      <td>615</td>
-      <td>603</td>
+      <td>562</td>
+      <td>30545</td>
+      <td>538</td>
+      <td>625</td>
+      <td>...</td>
+      <td>499</td>
+      <td>543</td>
+      <td>83608</td>
+      <td>510</td>
+      <td>2978</td>
+      <td>1453</td>
+      <td>4431</td>
+      <td>3382</td>
+      <td>2433</td>
+      <td>5815</td>
+      <td>14595</td>
+      <td>7159</td>
+      <td>21754</td>
+      <td>15386</td>
+      <td>10784</td>
+      <td>26170</td>
+      <td>31530</td>
+      <td>20172</td>
+      <td>51702</td>
+      <td>32897</td>
+      <td>25260</td>
+      <td>58157</td>
+      <td>30765</td>
+      <td>26052</td>
+      <td>56817</td>
+      <td>30190</td>
+      <td>25399</td>
+      <td>55589</td>
+      <td>17625</td>
+      <td>19980</td>
+      <td>37605</td>
+      <td>16078</td>
+      <td>14966</td>
+      <td>31044</td>
+      <td>5451</td>
+      <td>8792</td>
+      <td>14243</td>
+      <td>5011</td>
+      <td>4766</td>
+      <td>9777</td>
     </tr>
     <tr>
-      <th>576</th>
-      <td>2015</td>
-      <td>Wyoming</td>
-      <td>0</td>
-      <td>0</td>
-      <td>12</td>
-      <td>533</td>
+      <th>5</th>
+      <td>2005</td>
+      <td>CO</td>
+      <td>Colorado</td>
       <td>560</td>
-      <td>21</td>
-      <td>550</td>
-      <td>572</td>
-      <td>14</td>
-      <td>561</td>
-      <td>604</td>
-      <td>27</td>
-      <td>598</td>
-      <td>587</td>
-      <td>63</td>
+      <td>11990</td>
+      <td>560</td>
+      <td>3.88</td>
+      <td>2.2</td>
+      <td>3.49</td>
+      <td>4.0</td>
+      <td>3.41</td>
+      <td>3.1</td>
+      <td>3.33</td>
+      <td>3.9</td>
+      <td>3.43</td>
+      <td>3.7</td>
+      <td>3.56</td>
+      <td>3.7</td>
+      <td>533</td>
+      <td>948</td>
+      <td>535</td>
+      <td>543</td>
+      <td>1287</td>
+      <td>548</td>
+      <td>553</td>
+      <td>1550</td>
+      <td>552</td>
+      <td>562</td>
+      <td>1427</td>
+      <td>560</td>
+      <td>514</td>
+      <td>324</td>
+      <td>505</td>
+      <td>574</td>
+      <td>2662</td>
+      <td>568</td>
       <td>573</td>
-      <td>591</td>
+      <td>2323</td>
+      <td>570</td>
+      <td>627</td>
+      <td>...</td>
+      <td>558</td>
+      <td>577</td>
+      <td>5583</td>
+      <td>561</td>
+      <td>40</td>
+      <td>24</td>
+      <td>64</td>
+      <td>39</td>
+      <td>22</td>
+      <td>61</td>
+      <td>313</td>
+      <td>202</td>
+      <td>515</td>
+      <td>257</td>
+      <td>212</td>
+      <td>469</td>
+      <td>1529</td>
+      <td>927</td>
+      <td>2456</td>
+      <td>1343</td>
+      <td>1140</td>
+      <td>2483</td>
+      <td>2524</td>
+      <td>1889</td>
+      <td>4413</td>
+      <td>2529</td>
+      <td>2125</td>
+      <td>4654</td>
+      <td>1619</td>
+      <td>1864</td>
+      <td>3483</td>
+      <td>1708</td>
+      <td>1610</td>
+      <td>3318</td>
+      <td>382</td>
+      <td>677</td>
+      <td>1059</td>
+      <td>531</td>
+      <td>474</td>
+      <td>1005</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2005</td>
+      <td>CT</td>
+      <td>Connecticut</td>
+      <td>517</td>
+      <td>34313</td>
+      <td>517</td>
+      <td>3.66</td>
+      <td>2.1</td>
+      <td>3.13</td>
+      <td>3.9</td>
+      <td>3.03</td>
+      <td>3.1</td>
+      <td>3.00</td>
+      <td>3.8</td>
+      <td>3.07</td>
+      <td>3.5</td>
+      <td>3.18</td>
+      <td>3.6</td>
+      <td>463</td>
+      <td>2958</td>
+      <td>467</td>
+      <td>493</td>
+      <td>3186</td>
+      <td>499</td>
+      <td>507</td>
+      <td>3772</td>
+      <td>511</td>
+      <td>523</td>
+      <td>3018</td>
+      <td>523</td>
+      <td>434</td>
+      <td>1612</td>
+      <td>426</td>
+      <td>565</td>
+      <td>5952</td>
+      <td>559</td>
+      <td>585</td>
+      <td>4742</td>
+      <td>577</td>
+      <td>652</td>
+      <td>...</td>
+      <td>513</td>
+      <td>534</td>
+      <td>16456</td>
+      <td>520</td>
+      <td>669</td>
+      <td>368</td>
+      <td>1037</td>
+      <td>460</td>
+      <td>435</td>
+      <td>895</td>
+      <td>2540</td>
+      <td>1583</td>
+      <td>4123</td>
+      <td>2128</td>
+      <td>1698</td>
+      <td>3826</td>
+      <td>5181</td>
+      <td>4108</td>
+      <td>9289</td>
+      <td>5288</td>
+      <td>4769</td>
+      <td>10057</td>
+      <td>5533</td>
+      <td>5208</td>
+      <td>10741</td>
+      <td>5729</td>
+      <td>5276</td>
+      <td>11005</td>
+      <td>3108</td>
+      <td>3714</td>
+      <td>6822</td>
+      <td>3306</td>
+      <td>3215</td>
+      <td>6521</td>
+      <td>826</td>
+      <td>1475</td>
+      <td>2301</td>
+      <td>946</td>
+      <td>1063</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2005</td>
+      <td>DE</td>
+      <td>Delaware</td>
+      <td>502</td>
+      <td>6257</td>
+      <td>503</td>
+      <td>3.71</td>
+      <td>1.8</td>
+      <td>3.21</td>
+      <td>3.9</td>
+      <td>3.18</td>
+      <td>2.7</td>
+      <td>3.07</td>
+      <td>3.8</td>
+      <td>3.19</td>
+      <td>3.6</td>
+      <td>3.30</td>
+      <td>3.6</td>
+      <td>449</td>
+      <td>762</td>
+      <td>454</td>
+      <td>481</td>
+      <td>802</td>
+      <td>487</td>
+      <td>497</td>
+      <td>833</td>
+      <td>501</td>
+      <td>512</td>
+      <td>592</td>
+      <td>510</td>
+      <td>411</td>
+      <td>373</td>
+      <td>410</td>
+      <td>554</td>
+      <td>939</td>
+      <td>550</td>
+      <td>534</td>
+      <td>1000</td>
+      <td>532</td>
+      <td>593</td>
+      <td>...</td>
+      <td>498</td>
+      <td>521</td>
+      <td>2829</td>
+      <td>508</td>
+      <td>104</td>
+      <td>61</td>
+      <td>165</td>
+      <td>110</td>
+      <td>83</td>
+      <td>193</td>
+      <td>593</td>
+      <td>329</td>
+      <td>922</td>
+      <td>466</td>
+      <td>376</td>
+      <td>842</td>
+      <td>1157</td>
+      <td>786</td>
+      <td>1943</td>
+      <td>1163</td>
+      <td>870</td>
+      <td>2033</td>
+      <td>1005</td>
+      <td>909</td>
+      <td>1914</td>
+      <td>1020</td>
+      <td>866</td>
+      <td>1886</td>
+      <td>460</td>
+      <td>550</td>
+      <td>1010</td>
+      <td>523</td>
+      <td>473</td>
+      <td>996</td>
+      <td>109</td>
+      <td>194</td>
+      <td>303</td>
+      <td>146</td>
+      <td>161</td>
+      <td>307</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2005</td>
+      <td>DC</td>
+      <td>District Of Columbia</td>
+      <td>478</td>
+      <td>3622</td>
+      <td>490</td>
+      <td>3.54</td>
+      <td>1.8</td>
+      <td>3.03</td>
+      <td>3.8</td>
+      <td>3.04</td>
+      <td>2.7</td>
+      <td>2.91</td>
+      <td>3.7</td>
+      <td>2.99</td>
+      <td>3.3</td>
+      <td>3.11</td>
+      <td>3.4</td>
+      <td>391</td>
+      <td>487</td>
+      <td>404</td>
+      <td>433</td>
+      <td>246</td>
+      <td>454</td>
+      <td>470</td>
+      <td>199</td>
+      <td>482</td>
+      <td>539</td>
+      <td>161</td>
+      <td>549</td>
+      <td>374</td>
+      <td>535</td>
+      <td>377</td>
+      <td>608</td>
+      <td>546</td>
+      <td>622</td>
+      <td>566</td>
+      <td>437</td>
+      <td>574</td>
+      <td>584</td>
+      <td>...</td>
+      <td>475</td>
+      <td>509</td>
+      <td>1673</td>
+      <td>508</td>
+      <td>257</td>
+      <td>141</td>
+      <td>398</td>
+      <td>199</td>
+      <td>133</td>
+      <td>332</td>
+      <td>571</td>
+      <td>347</td>
+      <td>918</td>
+      <td>530</td>
+      <td>320</td>
+      <td>850</td>
+      <td>423</td>
+      <td>308</td>
+      <td>731</td>
+      <td>439</td>
+      <td>376</td>
+      <td>815</td>
+      <td>284</td>
+      <td>303</td>
+      <td>587</td>
+      <td>283</td>
+      <td>279</td>
+      <td>562</td>
+      <td>277</td>
+      <td>332</td>
+      <td>609</td>
+      <td>280</td>
+      <td>349</td>
+      <td>629</td>
+      <td>137</td>
+      <td>242</td>
+      <td>379</td>
+      <td>218</td>
+      <td>216</td>
+      <td>434</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2005</td>
+      <td>FL</td>
+      <td>Florida</td>
+      <td>498</td>
+      <td>93505</td>
+      <td>498</td>
+      <td>3.77</td>
+      <td>1.8</td>
+      <td>3.29</td>
+      <td>3.8</td>
+      <td>3.30</td>
+      <td>2.4</td>
+      <td>3.07</td>
+      <td>3.8</td>
+      <td>3.27</td>
+      <td>3.5</td>
+      <td>3.39</td>
+      <td>3.5</td>
+      <td>471</td>
+      <td>14713</td>
+      <td>473</td>
+      <td>492</td>
+      <td>12010</td>
+      <td>496</td>
+      <td>504</td>
+      <td>10455</td>
+      <td>505</td>
+      <td>516</td>
+      <td>7196</td>
+      <td>517</td>
+      <td>433</td>
+      <td>8728</td>
+      <td>431</td>
+      <td>544</td>
+      <td>10939</td>
+      <td>538</td>
+      <td>530</td>
+      <td>14006</td>
+      <td>526</td>
+      <td>597</td>
+      <td>...</td>
+      <td>496</td>
+      <td>516</td>
+      <td>42371</td>
+      <td>502</td>
+      <td>1436</td>
+      <td>866</td>
+      <td>2302</td>
+      <td>1256</td>
+      <td>1173</td>
+      <td>2429</td>
+      <td>8463</td>
+      <td>4955</td>
+      <td>13418</td>
+      <td>6947</td>
+      <td>5555</td>
+      <td>12502</td>
+      <td>18249</td>
+      <td>12184</td>
+      <td>30433</td>
+      <td>18062</td>
+      <td>13955</td>
+      <td>32017</td>
+      <td>15608</td>
+      <td>14074</td>
+      <td>29682</td>
+      <td>16153</td>
+      <td>13323</td>
+      <td>29476</td>
+      <td>6231</td>
+      <td>7964</td>
+      <td>14195</td>
+      <td>7145</td>
+      <td>6671</td>
+      <td>13816</td>
+      <td>1147</td>
+      <td>2328</td>
+      <td>3475</td>
+      <td>1571</td>
+      <td>1694</td>
+      <td>3265</td>
     </tr>
   </tbody>
 </table>
-<p>577 rows × 19 columns</p>
+<p>10 rows × 99 columns</p>
 </div>
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-6752c1d0-0780-43c5-a01f-44335be23f38')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-8a4127e2-1418-4528-aae9-a3e4bccd30c3')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -15230,12 +15760,12 @@ of the questions that we will be asking, so we are not going to remove any colum
 
     <script>
       const buttonEl =
-        document.querySelector('#df-6752c1d0-0780-43c5-a01f-44335be23f38 button.colab-df-convert');
+        document.querySelector('#df-8a4127e2-1418-4528-aae9-a3e4bccd30c3 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-6752c1d0-0780-43c5-a01f-44335be23f38');
+        const element = document.querySelector('#df-8a4127e2-1418-4528-aae9-a3e4bccd30c3');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -15255,8 +15785,8 @@ of the questions that we will be asking, so we are not going to remove any colum
   </div>
 
 
-<div id="df-459cdc02-ac74-44eb-a8e6-8fc0be0d25d5">
-  <button class="colab-df-quickchart" onclick="quickchart('df-459cdc02-ac74-44eb-a8e6-8fc0be0d25d5')"
+<div id="df-aec31229-adef-42dd-b653-aba59f5ccbf8">
+  <button class="colab-df-quickchart" onclick="quickchart('df-aec31229-adef-42dd-b653-aba59f5ccbf8')"
             title="Suggest charts."
             style="display:none;">
 
@@ -15375,7 +15905,7 @@ of the questions that we will be asking, so we are not going to remove any colum
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-459cdc02-ac74-44eb-a8e6-8fc0be0d25d5 button');
+        document.querySelector('#df-aec31229-adef-42dd-b653-aba59f5ccbf8 button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
@@ -15392,15 +15922,27 @@ of the questions that we will be asking, so we are not going to remove any colum
 
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>As shown below, there are no null cells in this data set.</p>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="err">!</span> <span class="n">pwd</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15418,20 +15960,790 @@ of the questions that we will be asking, so we are not going to remove any colum
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>/content/drive/MyDrive
-</pre>
-</div>
-</div>
 
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0</pre>
 </div>
 
 </div>
 
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>As shown below, all data types are correct.</p>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'display.max_rows'</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>Year                                                         int64
+State.Code                                                  object
+State.Name                                                  object
+Total.Math                                                   int64
+Total.Test-takers                                            int64
+Total.Verbal                                                 int64
+Academic Subjects.Arts/Music.Average GPA                   float64
+Academic Subjects.Arts/Music.Average Years                 float64
+Academic Subjects.English.Average GPA                      float64
+Academic Subjects.English.Average Years                    float64
+Academic Subjects.Foreign Languages.Average GPA            float64
+Academic Subjects.Foreign Languages.Average Years          float64
+Academic Subjects.Mathematics.Average GPA                  float64
+Academic Subjects.Mathematics.Average Years                float64
+Academic Subjects.Natural Sciences.Average GPA             float64
+Academic Subjects.Natural Sciences.Average Years           float64
+Academic Subjects.Social Sciences/History.Average GPA      float64
+Academic Subjects.Social Sciences/History.Average Years    float64
+Family Income.Between 20-40k.Math                            int64
+Family Income.Between 20-40k.Test-takers                     int64
+Family Income.Between 20-40k.Verbal                          int64
+Family Income.Between 40-60k.Math                            int64
+Family Income.Between 40-60k.Test-takers                     int64
+Family Income.Between 40-60k.Verbal                          int64
+Family Income.Between 60-80k.Math                            int64
+Family Income.Between 60-80k.Test-takers                     int64
+Family Income.Between 60-80k.Verbal                          int64
+Family Income.Between 80-100k.Math                           int64
+Family Income.Between 80-100k.Test-takers                    int64
+Family Income.Between 80-100k.Verbal                         int64
+Family Income.Less than 20k.Math                             int64
+Family Income.Less than 20k.Test-takers                      int64
+Family Income.Less than 20k.Verbal                           int64
+Family Income.More than 100k.Math                            int64
+Family Income.More than 100k.Test-takers                     int64
+Family Income.More than 100k.Verbal                          int64
+GPA.A minus.Math                                             int64
+GPA.A minus.Test-takers                                      int64
+GPA.A minus.Verbal                                           int64
+GPA.A plus.Math                                              int64
+GPA.A plus.Test-takers                                       int64
+GPA.A plus.Verbal                                            int64
+GPA.A.Math                                                   int64
+GPA.A.Test-takers                                            int64
+GPA.A.Verbal                                                 int64
+GPA.B.Math                                                   int64
+GPA.B.Test-takers                                            int64
+GPA.B.Verbal                                                 int64
+GPA.C.Math                                                   int64
+GPA.C.Test-takers                                            int64
+GPA.C.Verbal                                                 int64
+GPA.D or lower.Math                                          int64
+GPA.D or lower.Test-takers                                   int64
+GPA.D or lower.Verbal                                        int64
+GPA.No response.Math                                         int64
+GPA.No response.Test-takers                                  int64
+GPA.No response.Verbal                                       int64
+Gender.Female.Math                                           int64
+Gender.Female.Test-takers                                    int64
+Gender.Female.Verbal                                         int64
+Gender.Male.Math                                             int64
+Gender.Male.Test-takers                                      int64
+Gender.Male.Verbal                                           int64
+Score Ranges.Between 200 to 300.Math.Females                 int64
+Score Ranges.Between 200 to 300.Math.Males                   int64
+Score Ranges.Between 200 to 300.Math.Total                   int64
+Score Ranges.Between 200 to 300.Verbal.Females               int64
+Score Ranges.Between 200 to 300.Verbal.Males                 int64
+Score Ranges.Between 200 to 300.Verbal.Total                 int64
+Score Ranges.Between 300 to 400.Math.Females                 int64
+Score Ranges.Between 300 to 400.Math.Males                   int64
+Score Ranges.Between 300 to 400.Math.Total                   int64
+Score Ranges.Between 300 to 400.Verbal.Females               int64
+Score Ranges.Between 300 to 400.Verbal.Males                 int64
+Score Ranges.Between 300 to 400.Verbal.Total                 int64
+Score Ranges.Between 400 to 500.Math.Females                 int64
+Score Ranges.Between 400 to 500.Math.Males                   int64
+Score Ranges.Between 400 to 500.Math.Total                   int64
+Score Ranges.Between 400 to 500.Verbal.Females               int64
+Score Ranges.Between 400 to 500.Verbal.Males                 int64
+Score Ranges.Between 400 to 500.Verbal.Total                 int64
+Score Ranges.Between 500 to 600.Math.Females                 int64
+Score Ranges.Between 500 to 600.Math.Males                   int64
+Score Ranges.Between 500 to 600.Math.Total                   int64
+Score Ranges.Between 500 to 600.Verbal.Females               int64
+Score Ranges.Between 500 to 600.Verbal.Males                 int64
+Score Ranges.Between 500 to 600.Verbal.Total                 int64
+Score Ranges.Between 600 to 700.Math.Females                 int64
+Score Ranges.Between 600 to 700.Math.Males                   int64
+Score Ranges.Between 600 to 700.Math.Total                   int64
+Score Ranges.Between 600 to 700.Verbal.Females               int64
+Score Ranges.Between 600 to 700.Verbal.Males                 int64
+Score Ranges.Between 600 to 700.Verbal.Total                 int64
+Score Ranges.Between 700 to 800.Math.Females                 int64
+Score Ranges.Between 700 to 800.Math.Males                   int64
+Score Ranges.Between 700 to 800.Math.Total                   int64
+Score Ranges.Between 700 to 800.Verbal.Females               int64
+Score Ranges.Between 700 to 800.Verbal.Males                 int64
+Score Ranges.Between 700 to 800.Verbal.Total                 int64
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Table-%231"><strong>Table #1</strong><a class="anchor-link" href="#Table-%231">&#182;</a></h1><p>One of our hypothesis is that family income has a positive correlation with SAT scores, meaning the higher the family income, the higher the average SAT score. The questions we have based on this hypothesis are if there is a difference between math and english scores, and if the effects of these socioeconomic factors vary by year and state.</p>
+<p>The first table we have created below includes data about SAT scores related to family income. We have added also added columns to show the percentage of test-takers in each family income group of the total test-takers for each row.  To do this, we will create a new table, using columns from the main dataframe.</p>
+<p>We tidied this data by removing the state abbreviation column, as it is redundant here, in addition to changing column names to better reflect the data it hold.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="n">first_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">'Year'</span><span class="p">,</span> <span class="s1">'State.Name'</span><span class="p">,</span> <span class="s1">'Family Income.Less than 20k.Test-takers'</span><span class="p">,</span> <span class="s1">'Family Income.Less than 20k.Math'</span><span class="p">,</span><span class="s1">'Family Income.Less than 20k.Verbal'</span><span class="p">,</span><span class="s1">'Family Income.Between 20-40k.Test-takers'</span><span class="p">,</span> <span class="s1">'Family Income.Between 20-40k.Math'</span><span class="p">,</span> <span class="s1">'Family Income.Between 20-40k.Verbal'</span><span class="p">,</span> <span class="s1">'Family Income.Between 40-60k.Test-takers'</span><span class="p">,</span><span class="s1">'Family Income.Between 40-60k.Math'</span><span class="p">,</span> <span class="s1">'Family Income.Between 40-60k.Verbal'</span><span class="p">,</span><span class="s1">'Family Income.Between 60-80k.Test-takers'</span><span class="p">,</span> <span class="s1">'Family Income.Between 60-80k.Math'</span><span class="p">,</span><span class="s1">'Family Income.Between 60-80k.Verbal'</span><span class="p">,</span> <span class="s1">'Family Income.Between 80-100k.Test-takers'</span><span class="p">,</span> <span class="s1">'Family Income.Between 80-100k.Math'</span><span class="p">,</span> <span class="s1">'Family Income.Between 80-100k.Verbal'</span><span class="p">,</span> <span class="s1">'Family Income.More than 100k.Test-takers'</span><span class="p">,</span> <span class="s1">'Family Income.More than 100k.Math'</span><span class="p">,</span> <span class="s1">'Family Income.More than 100k.Verbal'</span> <span class="p">]]</span>
+<span class="n">first_df</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+
+  <div id="df-f7d9576a-0067-47e9-88c3-d62b7dbcfe32" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>State.Name</th>
+      <th>Family Income.Less than 20k.Test-takers</th>
+      <th>Family Income.Less than 20k.Math</th>
+      <th>Family Income.Less than 20k.Verbal</th>
+      <th>Family Income.Between 20-40k.Test-takers</th>
+      <th>Family Income.Between 20-40k.Math</th>
+      <th>Family Income.Between 20-40k.Verbal</th>
+      <th>Family Income.Between 40-60k.Test-takers</th>
+      <th>Family Income.Between 40-60k.Math</th>
+      <th>Family Income.Between 40-60k.Verbal</th>
+      <th>Family Income.Between 60-80k.Test-takers</th>
+      <th>Family Income.Between 60-80k.Math</th>
+      <th>Family Income.Between 60-80k.Verbal</th>
+      <th>Family Income.Between 80-100k.Test-takers</th>
+      <th>Family Income.Between 80-100k.Math</th>
+      <th>Family Income.Between 80-100k.Verbal</th>
+      <th>Family Income.More than 100k.Test-takers</th>
+      <th>Family Income.More than 100k.Math</th>
+      <th>Family Income.More than 100k.Verbal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2005</td>
+      <td>Alabama</td>
+      <td>175</td>
+      <td>462</td>
+      <td>474</td>
+      <td>324</td>
+      <td>513</td>
+      <td>527</td>
+      <td>442</td>
+      <td>539</td>
+      <td>551</td>
+      <td>473</td>
+      <td>550</td>
+      <td>564</td>
+      <td>475</td>
+      <td>566</td>
+      <td>577</td>
+      <td>980</td>
+      <td>588</td>
+      <td>590</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2005</td>
+      <td>Alaska</td>
+      <td>191</td>
+      <td>464</td>
+      <td>467</td>
+      <td>401</td>
+      <td>492</td>
+      <td>500</td>
+      <td>539</td>
+      <td>517</td>
+      <td>522</td>
+      <td>603</td>
+      <td>513</td>
+      <td>519</td>
+      <td>444</td>
+      <td>528</td>
+      <td>534</td>
+      <td>540</td>
+      <td>541</td>
+      <td>544</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2005</td>
+      <td>Arizona</td>
+      <td>891</td>
+      <td>485</td>
+      <td>474</td>
+      <td>2121</td>
+      <td>498</td>
+      <td>495</td>
+      <td>2270</td>
+      <td>520</td>
+      <td>518</td>
+      <td>2372</td>
+      <td>524</td>
+      <td>523</td>
+      <td>1866</td>
+      <td>534</td>
+      <td>533</td>
+      <td>3083</td>
+      <td>554</td>
+      <td>546</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2005</td>
+      <td>Arkansas</td>
+      <td>107</td>
+      <td>489</td>
+      <td>486</td>
+      <td>180</td>
+      <td>513</td>
+      <td>526</td>
+      <td>245</td>
+      <td>543</td>
+      <td>555</td>
+      <td>227</td>
+      <td>553</td>
+      <td>570</td>
+      <td>147</td>
+      <td>570</td>
+      <td>580</td>
+      <td>314</td>
+      <td>572</td>
+      <td>589</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2005</td>
+      <td>California</td>
+      <td>19323</td>
+      <td>451</td>
+      <td>421</td>
+      <td>26161</td>
+      <td>477</td>
+      <td>458</td>
+      <td>18347</td>
+      <td>506</td>
+      <td>494</td>
+      <td>17937</td>
+      <td>521</td>
+      <td>511</td>
+      <td>14120</td>
+      <td>535</td>
+      <td>525</td>
+      <td>27984</td>
+      <td>566</td>
+      <td>551</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>572</th>
+      <td>2015</td>
+      <td>Virginia</td>
+      <td>3114</td>
+      <td>441</td>
+      <td>446</td>
+      <td>4906</td>
+      <td>469</td>
+      <td>472</td>
+      <td>5070</td>
+      <td>488</td>
+      <td>494</td>
+      <td>4843</td>
+      <td>496</td>
+      <td>505</td>
+      <td>4797</td>
+      <td>514</td>
+      <td>518</td>
+      <td>16858</td>
+      <td>549</td>
+      <td>550</td>
+    </tr>
+    <tr>
+      <th>573</th>
+      <td>2015</td>
+      <td>Washington</td>
+      <td>2668</td>
+      <td>449</td>
+      <td>437</td>
+      <td>3689</td>
+      <td>483</td>
+      <td>473</td>
+      <td>3454</td>
+      <td>503</td>
+      <td>499</td>
+      <td>3619</td>
+      <td>521</td>
+      <td>517</td>
+      <td>3496</td>
+      <td>534</td>
+      <td>530</td>
+      <td>10262</td>
+      <td>560</td>
+      <td>552</td>
+    </tr>
+    <tr>
+      <th>574</th>
+      <td>2015</td>
+      <td>West Virginia</td>
+      <td>159</td>
+      <td>448</td>
+      <td>455</td>
+      <td>269</td>
+      <td>468</td>
+      <td>481</td>
+      <td>294</td>
+      <td>483</td>
+      <td>492</td>
+      <td>281</td>
+      <td>487</td>
+      <td>501</td>
+      <td>297</td>
+      <td>503</td>
+      <td>511</td>
+      <td>696</td>
+      <td>522</td>
+      <td>532</td>
+    </tr>
+    <tr>
+      <th>575</th>
+      <td>2015</td>
+      <td>Wisconsin</td>
+      <td>60</td>
+      <td>573</td>
+      <td>532</td>
+      <td>127</td>
+      <td>551</td>
+      <td>544</td>
+      <td>174</td>
+      <td>596</td>
+      <td>579</td>
+      <td>172</td>
+      <td>590</td>
+      <td>580</td>
+      <td>213</td>
+      <td>605</td>
+      <td>595</td>
+      <td>730</td>
+      <td>615</td>
+      <td>603</td>
+    </tr>
+    <tr>
+      <th>576</th>
+      <td>2015</td>
+      <td>Wyoming</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>12</td>
+      <td>533</td>
+      <td>560</td>
+      <td>21</td>
+      <td>550</td>
+      <td>572</td>
+      <td>14</td>
+      <td>561</td>
+      <td>604</td>
+      <td>27</td>
+      <td>598</td>
+      <td>587</td>
+      <td>63</td>
+      <td>573</td>
+      <td>591</td>
+    </tr>
+  </tbody>
+</table>
+<p>577 rows × 20 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-f7d9576a-0067-47e9-88c3-d62b7dbcfe32')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-f7d9576a-0067-47e9-88c3-d62b7dbcfe32 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-f7d9576a-0067-47e9-88c3-d62b7dbcfe32');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-15670e41-462c-40d3-a40a-fc4f31d55839">
+  <button class="colab-df-quickchart" onclick="quickchart('df-15670e41-462c-40d3-a40a-fc4f31d55839')"
+            title="Suggest charts."
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-15670e41-462c-40d3-a40a-fc4f31d55839 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="n">first_df</span> <span class="o">=</span> <span class="n">first_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">'State.Name'</span><span class="p">:</span> <span class="s1">'State'</span><span class="p">,</span>
+                                      <span class="s1">'Family Income.Less than 20k.Test-takers'</span> <span class="p">:</span> <span class="s1">'Family Income &lt; 20k: Number of Test-takers'</span><span class="p">,</span>
+                                      <span class="s1">'Family Income.Less than 20k.Math'</span> <span class="p">:</span> <span class="s1">'Family Income &lt; 20k: Math Average Score'</span><span class="p">,</span>
+                                      <span class="s1">'Family Income.Less than 20k.Verbal'</span> <span class="p">:</span> <span class="s1">'Family Income &lt; 20k: Reading Average Score'</span><span class="p">,</span>
+                                      <span class="s1">'Family Income.Between 20-40k.Test-takers'</span> <span class="p">:</span> <span class="s1">'Family Income 20-40k: Number of Test-takers'</span><span class="p">,</span>
+                                      <span class="s1">'Family Income.Between 20-40k.Math'</span> <span class="p">:</span> <span class="s1">'Family Income 20-40k: Math Average Score'</span><span class="p">,</span>
+                                      <span class="s1">'Family Income.Between 20-40k.Verbal'</span> <span class="p">:</span> <span class="s1">'Family Income 20-40k: Reading Average Score'</span><span class="p">,</span>
+                                      <span class="s1">'Family Income.Between 40-60k.Test-takers'</span> <span class="p">:</span> <span class="s1">'Family Income 40-60k: Number of Test-takers'</span><span class="p">,</span>
+                                      <span class="s1">'Family Income.Between 40-60k.Math'</span> <span class="p">:</span> <span class="s1">'Family Income 40-60k: Math Average Score'</span><span class="p">,</span>
+                                      <span class="s1">'Family Income.Between 40-60k.Verbal'</span> <span class="p">:</span> <span class="s1">'Family Income 40-60k: Reading Average Score'</span><span class="p">,</span>
+                                      <span class="s1">'Family Income.Between 60-80k.Test-takers'</span> <span class="p">:</span> <span class="s1">'Family Income 60-80k: Number of Test-takers'</span><span class="p">,</span>
+                                      <span class="s1">'Family Income.Between 60-80k.Math'</span> <span class="p">:</span> <span class="s1">'Family Income 60-80k: Math Average Score'</span><span class="p">,</span>
+                                      <span class="s1">'Family Income.Between 60-80k.Verbal'</span> <span class="p">:</span> <span class="s1">'Family Income 60-80k: Reading Average Score'</span><span class="p">,</span>
+                                      <span class="s1">'Family Income.Between 80-100k.Test-takers'</span> <span class="p">:</span> <span class="s1">'Family Income 80-100k: Number of Test-takers'</span><span class="p">,</span>
+                                      <span class="s1">'Family Income.Between 80-100k.Math'</span> <span class="p">:</span> <span class="s1">'Family Income 80-100k: Math Average Score'</span><span class="p">,</span>
+                                      <span class="s1">'Family Income.Between 80-100k.Verbal'</span> <span class="p">:</span> <span class="s1">'Family Income 80-100k: Reading Average Score'</span><span class="p">,</span>
+                                      <span class="s1">'Family Income.More than 100k.Test-takers'</span> <span class="p">:</span> <span class="s1">'Family Income &gt; 100k: Number of Test-takers'</span><span class="p">,</span>
+                                      <span class="s1">'Family Income.More than 100k.Math'</span> <span class="p">:</span> <span class="s1">'Family Income &gt; 100k: Math Average Score'</span><span class="p">,</span>
+                                      <span class="s1">'Family Income.More than 100k.Verbal'</span> <span class="p">:</span> <span class="s1">'Family Income &gt; 100k: Reading Average Score'</span>
+<span class="p">})</span>
+<span class="n">first_df</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="ch">#! pwd</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15446,263 +16758,6 @@ of the questions that we will be asking, so we are not going to remove any colum
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[NbConvertApp] WARNING | pattern &#39;/content/drive/MyDrive/Data_Science_Final.ipynb&#39; matched no files
-This application is used to convert notebook files (*.ipynb)
-        to various other formats.
-
-        WARNING: THE COMMANDLINE INTERFACE MAY CHANGE IN FUTURE RELEASES.
-
-Options
-=======
-The options below are convenience aliases to configurable class-options,
-as listed in the &#34;Equivalent to&#34; description-line of the aliases.
-To see all configurable class-options for some &lt;cmd&gt;, use:
-    &lt;cmd&gt; --help-all
-
---debug
-    set log level to logging.DEBUG (maximize logging output)
-    Equivalent to: [--Application.log_level=10]
---show-config
-    Show the application&#39;s configuration (human-readable format)
-    Equivalent to: [--Application.show_config=True]
---show-config-json
-    Show the application&#39;s configuration (json format)
-    Equivalent to: [--Application.show_config_json=True]
---generate-config
-    generate default config file
-    Equivalent to: [--JupyterApp.generate_config=True]
--y
-    Answer yes to any questions instead of prompting.
-    Equivalent to: [--JupyterApp.answer_yes=True]
---execute
-    Execute the notebook prior to export.
-    Equivalent to: [--ExecutePreprocessor.enabled=True]
---allow-errors
-    Continue notebook execution even if one of the cells throws an error and include the error message in the cell output (the default behaviour is to abort conversion). This flag is only relevant if &#39;--execute&#39; was specified, too.
-    Equivalent to: [--ExecutePreprocessor.allow_errors=True]
---stdin
-    read a single notebook file from stdin. Write the resulting notebook with default basename &#39;notebook.*&#39;
-    Equivalent to: [--NbConvertApp.from_stdin=True]
---stdout
-    Write notebook output to stdout instead of files.
-    Equivalent to: [--NbConvertApp.writer_class=StdoutWriter]
---inplace
-    Run nbconvert in place, overwriting the existing notebook (only
-            relevant when converting to notebook format)
-    Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory=]
---clear-output
-    Clear output of current file and save in place,
-            overwriting the existing notebook.
-    Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory= --ClearOutputPreprocessor.enabled=True]
---no-prompt
-    Exclude input and output prompts from converted document.
-    Equivalent to: [--TemplateExporter.exclude_input_prompt=True --TemplateExporter.exclude_output_prompt=True]
---no-input
-    Exclude input cells and output prompts from converted document.
-            This mode is ideal for generating code-free reports.
-    Equivalent to: [--TemplateExporter.exclude_output_prompt=True --TemplateExporter.exclude_input=True --TemplateExporter.exclude_input_prompt=True]
---allow-chromium-download
-    Whether to allow downloading chromium if no suitable version is found on the system.
-    Equivalent to: [--WebPDFExporter.allow_chromium_download=True]
---disable-chromium-sandbox
-    Disable chromium security sandbox when converting to PDF..
-    Equivalent to: [--WebPDFExporter.disable_sandbox=True]
---show-input
-    Shows code input. This flag is only useful for dejavu users.
-    Equivalent to: [--TemplateExporter.exclude_input=False]
---embed-images
-    Embed the images as base64 dataurls in the output. This flag is only useful for the HTML/WebPDF/Slides exports.
-    Equivalent to: [--HTMLExporter.embed_images=True]
---sanitize-html
-    Whether the HTML in Markdown cells and cell outputs should be sanitized..
-    Equivalent to: [--HTMLExporter.sanitize_html=True]
---log-level=&lt;Enum&gt;
-    Set the log level by value or name.
-    Choices: any of [0, 10, 20, 30, 40, 50, &#39;DEBUG&#39;, &#39;INFO&#39;, &#39;WARN&#39;, &#39;ERROR&#39;, &#39;CRITICAL&#39;]
-    Default: 30
-    Equivalent to: [--Application.log_level]
---config=&lt;Unicode&gt;
-    Full path of a config file.
-    Default: &#39;&#39;
-    Equivalent to: [--JupyterApp.config_file]
---to=&lt;Unicode&gt;
-    The export format to be used, either one of the built-in formats
-            [&#39;asciidoc&#39;, &#39;custom&#39;, &#39;html&#39;, &#39;latex&#39;, &#39;markdown&#39;, &#39;notebook&#39;, &#39;pdf&#39;, &#39;python&#39;, &#39;rst&#39;, &#39;script&#39;, &#39;slides&#39;, &#39;webpdf&#39;]
-            or a dotted object name that represents the import path for an
-            ``Exporter`` class
-    Default: &#39;&#39;
-    Equivalent to: [--NbConvertApp.export_format]
---template=&lt;Unicode&gt;
-    Name of the template to use
-    Default: &#39;&#39;
-    Equivalent to: [--TemplateExporter.template_name]
---template-file=&lt;Unicode&gt;
-    Name of the template file to use
-    Default: None
-    Equivalent to: [--TemplateExporter.template_file]
---theme=&lt;Unicode&gt;
-    Template specific theme(e.g. the name of a JupyterLab CSS theme distributed
-    as prebuilt extension for the lab template)
-    Default: &#39;light&#39;
-    Equivalent to: [--HTMLExporter.theme]
---sanitize_html=&lt;Bool&gt;
-    Whether the HTML in Markdown cells and cell outputs should be sanitized.This
-    should be set to True by nbviewer or similar tools.
-    Default: False
-    Equivalent to: [--HTMLExporter.sanitize_html]
---writer=&lt;DottedObjectName&gt;
-    Writer class used to write the
-                                        results of the conversion
-    Default: &#39;FilesWriter&#39;
-    Equivalent to: [--NbConvertApp.writer_class]
---post=&lt;DottedOrNone&gt;
-    PostProcessor class used to write the
-                                        results of the conversion
-    Default: &#39;&#39;
-    Equivalent to: [--NbConvertApp.postprocessor_class]
---output=&lt;Unicode&gt;
-    overwrite base name use for output files.
-                can only be used when converting one notebook at a time.
-    Default: &#39;&#39;
-    Equivalent to: [--NbConvertApp.output_base]
---output-dir=&lt;Unicode&gt;
-    Directory to write output(s) to. Defaults
-                                  to output to the directory of each notebook. To recover
-                                  previous default behaviour (outputting to the current
-                                  working directory) use . as the flag value.
-    Default: &#39;&#39;
-    Equivalent to: [--FilesWriter.build_directory]
---reveal-prefix=&lt;Unicode&gt;
-    The URL prefix for reveal.js (version 3.x).
-            This defaults to the reveal CDN, but can be any url pointing to a copy
-            of reveal.js.
-            For speaker notes to work, this must be a relative path to a local
-            copy of reveal.js: e.g., &#34;reveal.js&#34;.
-            If a relative path is given, it must be a subdirectory of the
-            current directory (from which the server is run).
-            See the usage documentation
-            (https://nbconvert.readthedocs.io/en/latest/usage.html#reveal-js-html-slideshow)
-            for more details.
-    Default: &#39;&#39;
-    Equivalent to: [--SlidesExporter.reveal_url_prefix]
---nbformat=&lt;Enum&gt;
-    The nbformat version to write.
-            Use this to downgrade notebooks.
-    Choices: any of [1, 2, 3, 4]
-    Default: 4
-    Equivalent to: [--NotebookExporter.nbformat_version]
-
-Examples
---------
-
-    The simplest way to use nbconvert is
-
-            &gt; jupyter nbconvert mynotebook.ipynb --to html
-
-            Options include [&#39;asciidoc&#39;, &#39;custom&#39;, &#39;html&#39;, &#39;latex&#39;, &#39;markdown&#39;, &#39;notebook&#39;, &#39;pdf&#39;, &#39;python&#39;, &#39;rst&#39;, &#39;script&#39;, &#39;slides&#39;, &#39;webpdf&#39;].
-
-            &gt; jupyter nbconvert --to latex mynotebook.ipynb
-
-            Both HTML and LaTeX support multiple output templates. LaTeX includes
-            &#39;base&#39;, &#39;article&#39; and &#39;report&#39;.  HTML includes &#39;basic&#39;, &#39;lab&#39; and
-            &#39;classic&#39;. You can specify the flavor of the format used.
-
-            &gt; jupyter nbconvert --to html --template lab mynotebook.ipynb
-
-            You can also pipe the output to stdout, rather than a file
-
-            &gt; jupyter nbconvert mynotebook.ipynb --stdout
-
-            PDF is generated via latex
-
-            &gt; jupyter nbconvert mynotebook.ipynb --to pdf
-
-            You can get (and serve) a Reveal.js-powered slideshow
-
-            &gt; jupyter nbconvert myslides.ipynb --to slides --post serve
-
-            Multiple notebooks can be given at the command line in a couple of
-            different ways:
-
-            &gt; jupyter nbconvert notebook*.ipynb
-            &gt; jupyter nbconvert notebook1.ipynb notebook2.ipynb
-
-            or you can specify the notebooks list in a config file, containing::
-
-                c.NbConvertApp.notebooks = [&#34;my_notebook.ipynb&#34;]
-
-            &gt; jupyter nbconvert --config mycfg.py
-
-To see all available configurables, use `--help-all`.
-
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">CalledProcessError</span>                        Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-22-ff8deb093998&gt;</span> in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;shell&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;jupyter nbconvert --to html /content/drive/MyDrive/Data_Science_Final.ipynb\n&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.10/dist-packages/google/colab/_shell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    332</span>     <span class="ansi-green-fg">if</span> line <span class="ansi-green-fg">and</span> <span class="ansi-green-fg">not</span> cell<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    333</span>       cell <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39; &#39;</span>
-<span class="ansi-green-fg">--&gt; 334</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> super<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span>magic_name<span class="ansi-blue-fg">,</span> line<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    335</span> 
-<span class="ansi-green-intense-fg ansi-bold">    336</span> 
-
-<span class="ansi-green-fg">/usr/local/lib/python3.10/dist-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2471</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   2472</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 2473</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2474</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2475</span> 
-
-<span class="ansi-green-fg">/usr/local/lib/python3.10/dist-packages/google/colab/_system_commands.py</span> in <span class="ansi-cyan-fg">_shell_cell_magic</span><span class="ansi-blue-fg">(args, cmd)</span>
-<span class="ansi-green-intense-fg ansi-bold">    110</span>   result <span class="ansi-blue-fg">=</span> _run_command<span class="ansi-blue-fg">(</span>cmd<span class="ansi-blue-fg">,</span> clear_streamed_output<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    111</span>   <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> parsed_args<span class="ansi-blue-fg">.</span>ignore_errors<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 112</span><span class="ansi-red-fg">     </span>result<span class="ansi-blue-fg">.</span>check_returncode<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    113</span>   <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">    114</span> 
-
-<span class="ansi-green-fg">/usr/local/lib/python3.10/dist-packages/google/colab/_system_commands.py</span> in <span class="ansi-cyan-fg">check_returncode</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    135</span>   <span class="ansi-green-fg">def</span> check_returncode<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    136</span>     <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 137</span><span class="ansi-red-fg">       raise subprocess.CalledProcessError(
-</span><span class="ansi-green-intense-fg ansi-bold">    138</span>           returncode<span class="ansi-blue-fg">=</span>self<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">,</span> cmd<span class="ansi-blue-fg">=</span>self<span class="ansi-blue-fg">.</span>args<span class="ansi-blue-fg">,</span> output<span class="ansi-blue-fg">=</span>self<span class="ansi-blue-fg">.</span>output
-<span class="ansi-green-intense-fg ansi-bold">    139</span>       )
-
-<span class="ansi-red-fg">CalledProcessError</span>: Command &#39;jupyter nbconvert --to html /content/drive/MyDrive/Data_Science_Final.ipynb
-&#39; returned non-zero exit status 255.</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
